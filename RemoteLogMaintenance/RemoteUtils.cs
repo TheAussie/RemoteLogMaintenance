@@ -24,7 +24,7 @@ namespace RemoteLogMaintenance
         public bool getToken()
         {
 
-            string sendCommand = "http://" + conn.Server + "/" + "v2/token/create/" + conn.Password + "?username=" + conn.UserId;
+            string sendCommand = "http://" + conn.Server + "/" + "v2/token/create/" + "?username=" + conn.UserId + "&password=" + conn.Password;
 
             JObject results = Utils.GetHTTP(sendCommand);
 
